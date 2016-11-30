@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<title>AngularJS Demo</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+
+    <script src="app.js"></script>
+    <script src="email-field.directive.js"></script>
+    <script src="email-field.component.js"></script>
+    <script src="validation.service.js"></script>
+    <script src="validation.factory.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="appController as appCtrl">
+
+<h2>AngularJS demo</h2>
+
+<div class="row">
+    <label>Email:</label>
+    <input type="text" class="email-input"
+           ng-model="appCtrl.email"
+           ng-class="{'invalid' : appCtrl.isValidEmail === false, 'valid' : appCtrl.isValidEmail === true}"/>
+    <div ng-show="appCtrl.isValidEmail === true">Excellent! Your email is valid</div>
+    <div ng-show="appCtrl.isValidEmail === false">Sorry, this email is not valid. Try another</div>
+    <button ng-click="appCtrl.validateEmail()">Validate</button>
+    <button ng-click="appCtrl.clearField()">Clear</button>
+</div>
+
+<br>
+<div class="row" ng-if="appCtrl.showElements">
+    <email-directive email="appCtrl.email"></email-directive>
+</div>
+
+<br>
+<div class="row" ng-if="appCtrl.showElements">
+    <email-component email="appCtrl.email"></email-component>
+</div>
+
+<br>
+<br>
+<button ng-click="appCtrl.toggleElements()">Show/Hide</button>
+
+<br>
+<h3><a href="/">Homepage</a></h3>
+</body>
+
+</html>

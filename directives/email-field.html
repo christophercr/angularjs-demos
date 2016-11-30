@@ -1,0 +1,8 @@
+<label>Email:</label>
+<input type="text" class="email-input"
+    ng-model="ctrl.email"
+    ng-class="{invalid : ctrl.isValidEmail === false, valid : ctrl.isValidEmail === true}"/>
+<div ng-show="ctrl.isValidEmail === true">Excellent! Your email is valid</div>
+<div ng-show="ctrl.isValidEmail === false">Sorry, this email is not valid. Try another</div>
+<button ng-click="ctrl.validateEmail()">Validate</button>
+<button ng-click="ctrl.clearField()">Clear</button>

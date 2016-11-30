@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>AngularJS Demo</title>
+<head>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-component-router/angular_1_router.js"></script>
+
+    <script src="app.js"></script>
+
+    <!-- Users -->
+    <script src="users/users-page.component.js"></script>
+    <script src="users/user-list.component.js"></script>
+
+    <!-- Profiles -->
+    <script src="profiles/profiles-page.component.js"></script>
+    <script src="profiles/profile-list.component.js"></script>
+
+    <base href="/component-routing/"/>
+
+</head>
+
+<body ng-app="app">
+
+<h1>AngularJS Component Router Demo</h1>
+
+    <app></app>
+
+    <h3><a href="/">Homepage</a></h3>
+</body>
+
+</html>

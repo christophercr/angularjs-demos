@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-componentRouter-production</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-component-router/angular_1_router.js"></script>
+
+    <script src="app.js"></script>
+    <script src="heroes.js"></script>
+    <script src="crisis.js"></script>
+    <script src="dialog.js"></script>
+
+
+    <script type="text/javascript">
+        angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+    </script>
+</head>
+<body ng-app="app">
+<h1 class="title">Component Router</h1>
+<app></app>
+
+<h3><a href="/">Homepage</a></h3>
+</body>
+</html>
